@@ -21,34 +21,32 @@
     <h2>How did you hear about us</h2>
     </div>
     <label>
-    <input type="radio" name="Billboard" Value="Billboard">
+    <input type="checkbox" name="Billboard" Value="Billboard">
         Billboard
     </label>
     <label>
-    <input type="radio" name="Radio Advertisement" VALUE="Radio Advertisement">
+    <input type="checkbox" name="Radio Advertisement" VALUE="Radio Advertisement">
         Radio Advertisement
     </label>
     <label>
-    <input type="radio" name="Internet Advertisement" Value="Internet Advertisement">
+    <input type="checkbox" name="Internet Advertisement" Value="Internet Advertisement">
         Internet Advertisement
     </label>
     <label>
-        <input type="radio" name="Other" value="Other">
+        <input type="checkbox" name="Other" value="Other">
         Other
     </label>
     <br>
     <br>
-    <label for="Web Browser"><strong>What Web Browser are you using</strong></label>
-    <div>
-    <select id="Web Browser">
-        <option value="Internet Explorer">Internet Explorer</option>
-        <option value="FireFox">FireFox</option>
-        <option value="Google Chrome">Google Chrome</option>
-        <option value="Other">Other</option>
-    </select>
-    </div>
-    <br>
-    <div>
+    <h2>What Web Browser are you using?</h2>
+    <label for="dropdown">Select your browser</label>
+        <select name="dropdown" id="dropdown"> 
+            <option value="Chrome">Chrome</option> 
+            <option value="Firefox">Firefox</option> 
+            <option value="Safari" selected>Safari</option> 
+            <option value="Internet Explorer">Internet Explorer</option>
+        </select>
+        <div>
         <button type="submit">Finish</button>
     </div>
 </form>
