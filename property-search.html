@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>property-search</title>
+</head>
+<body>
+    <form>
+        <section>
+            <h1>Search for your next property <strong>TODAY!</strong></h1>
+            <hr>
+            <label for="dropdown">Property Type</label>
+            <select name="dropdown" id="dropdown" required autofocus>
+                <option value="Condo">Condo</option>
+                <option value="Appartment">appartment</option>
+                <option value="Town House">Town House</option>
+                <option value="Private Home">Private Home</option>
+            </select>
+        </section>
+        <section>
+            <label for="square footage">Square footage</label>
+            <input id="square footage" type="text" name="square footage" required placeholder="Square footage">
+            <br>
+            <label for="min price">Minimum Price</label>
+            <input id="min price" type="text" name="min price" required placeholder="min price">
+            <br>
+            <label for="max price">Maximum Price</label>
+            <input id="max price" type="text" name="max price" required placeholder="max price">
+        </section>
+        <section>
+            <label for="zip">Zip code</label>
+            <input id="zip" name="zip" type="zip" placeholder="Enter Zip Here" required>
+            <br>
+            <label for="dropdown1">Number of bedrooms</label>
+            <select name="dropdown1" id="dropdown1" required autofocus>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="other">other</option>
+            </select>
+        </section>
+        <section>
+            <label for="dropdown2">number of bathrooms</label>
+            <select id="dropdown2" name="dropdown2" required autofocus>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="other">other</option>
+            </select>
+        </section>
+        <section>
+            <h3>Pets allowed</h3>
+            <label>
+                <input type="radio" name="pet" Value="pet">
+                yes
+            </label>
+            <label>
+                <input type="radio" name="pet" VALUE="pet">
+                no
+            </label>
+        </section>
+    </form>
+    <br>
+<button type="submit">Search Now</button>
+</body>
+</html>
