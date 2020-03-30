@@ -1,0 +1,58 @@
+.fancy-header {
+    color: blueviolet; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+h1, h2 {
+    text-decoration: underline;
+    color: whitesmoke;
+}
+body {
+    background-color: white;
+    background-image: url("../img/background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+ul, ol {
+    list-style-type: circle;
+    color: white;
+}
+a:visited {
+    color: whitesmoke;
+}
+a:hover {
+    color: red;
+}
+a:link {
+    color: white;
+}
+a:active {
+    color: greenyellow;
+}
+.footer {
+    color: black;
+    text-decoration: underline;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+}
+@keyframes pulse {
+    0%{background-color: aquamarine}
+    25%{background-color: blueviolet}
+    50%{background-color: cornflowerblue}
+    75%{background-color: mediumvioletred}
+    100%{background-color: greenyellow}
+}
+p {
+    color: white;
+}
+th,  td, table {
+    background-color: black;
+    color: white;
+    border-collapse: collapse;
+    border: 1px solid white;
+    padding: 15px;
+    text-align: left;
+}
