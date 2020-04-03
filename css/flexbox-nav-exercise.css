@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background-image: linear-gradient(dimgrey,whitesmoke);
+}
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 1em;
+    text-shadow: 1px 1px whitesmoke;
+}
+.logo {
+    margin: auto;
+    flex-basis: 10em;
+}
+nav a:hover {
+    background: white;
+}
+.icon:hover {
+    transform:rotateY(180deg);
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+}
+@keyframes pulse {
+    0%{background-color: slateblue}
+    25%{background-color: darkslategrey}
+    50%{background-color: forestgreen}
+    75%{background-color: indianred}
+    100%{background-color: yellowgreen}
+}
+
