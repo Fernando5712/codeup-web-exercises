@@ -1,0 +1,59 @@
+main {
+    display:grid;
+    width:500px;
+    height:500px;
+    border:10px solid grey;
+    border-radius: 10px;
+    background-color: black;
+    padding: 20px;
+    margin: 20px;
+    grid-gap: 5px;
+    /*grid-template-columns: repeat(8, 1fr);*/
+    /*grid-template-rows: repeat(8,1fr);*/
+    grid-template-areas:
+    "itemone itemone itemone itemtwo itemtwo itemtwo itemtwo itemtwo"
+    "itemone itemone itemone itemtwo itemtwo itemtwo itemtwo itemtwo"
+    "itemthree itemthree itemthree itemtwo itemtwo itemtwo itemtwo itemtwo"
+    "itemthree itemthree itemthree itemfour itemfour itemfive itemfive itemfive"
+    "itemthree itemthree itemthree itemfour itemfour itemfive itemfive itemfive"
+    "itemsix itemsix itemsix itemfour itemfour itemseven itemseven itemseven"
+    "itemsix itemsix itemsix itemfour itemfour itemseven itemseven itemseven"
+    "itemeight itemeight itemeight itemnine itemnine itemnine itemnine itemnine"
+}
+.item1 {
+    grid-area:itemone;
+    background-color: blue;
+}
+.item2 {
+    grid-area: itemtwo;
+    background-color: red;
+}
+.item3 {
+    grid-area: itemthree;
+    background-color: yellow;
+}
+.item4 {
+    grid-area: itemfour;
+    background-color: white;
+}
+.item5 {
+    grid-area: itemfive;
+    background-color: white;
+}
+.item6 {
+    grid-area: itemsix;
+    background-color: white;
+}
+.item7 {
+    grid-area: itemseven;
+    background-color: yellow;
+}
+.item8 {
+    grid-area: itemeight;
+    background-color:red;
+}
+.item9 {
+    grid-area: itemnine;
+    background-color:blue;
+}
+
