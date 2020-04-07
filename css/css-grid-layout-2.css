@@ -1,0 +1,34 @@
+main {
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 90px 500px 100px 100px;
+    height:100vh;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    grid-template-areas:
+            "head head head"
+            "nav  art  art "
+            "nav   ad   ad "
+            "nav  foot foot";
+}
+body {
+    margin: 0;
+}
+.header {
+    background-color:limegreen;
+    grid-area: head;
+}
+.nav {background-color: limegreen;
+    grid-area: nav;
+}
+.article {background-color: limegreen;
+    grid-area: art;
+}
+.footer {background-color: limegreen;
+    grid-area: foot;
+}
+.ads {background-color: limegreen;
+    grid-area: ad;
+}
