@@ -21,7 +21,22 @@
 //     console.log(x)
 // }
 
-for (var i = 100; i >= 5; i -= 5){
-    console.log(i)
-}
+// for (var i = 100; i >= 5; i -= 5){
+//     console.log(i)
+// }
 
+var conesForSell = Math.floor(Math.random() * 50) + 50;
+do {
+    console.log(" Cones for sale " + conesForSell);
+    var conesBought = Math.floor(Math.random() * 5) + 1;
+    if (conesBought <= conesForSell){
+        console.log(conesForSell + " cones sold ");
+        conesForSell -= conesBought;
+        console.log(" My number of cones left is " + conesForSell);
+        if (conesForSell === 0){
+            console.log("i sold all my cones ");
+        }
+    } else {
+        console.log("cant sell you " + conesBought + " i only have " + conesForSell + " left ")
+    }
+}while (conesForSell >= 1);
