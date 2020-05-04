@@ -47,11 +47,29 @@ twoMoreAwayFromZero(-3.5) will return -5.5-->
    // function isWhole(num) {
    //     return num === math.round(num);
    // }
-    function twoNumbers(x,y) {
-        if(x >= y) {
-            return x
-        } else return y;
+   //  function twoNumbers(x,y) {
+   //      if(x >= y) {
+   //          return x
+   //      } else return y;
+   //  }
+
+
+
+    function fizzBuzz() {
+        for (var i = 1; i <= 50; i++){
+            if (i % 3 === 0 && i % 5 === 0){
+                console.log("FizzBuzz")
+            } else if (i % 3 === 0)
+                console.log("fizz");
+            else if (i % 5 === 0)
+                console.log("buzz");
+            else {
+                console.log(i)
+            }
+        }
     }
+
+    console.log(fizzBuzz());
 </script>
 </body>
 </html>
