@@ -24,56 +24,73 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id="xwing">JS is Cool</button>
+<button id="ywing">Blue</button>
+<button id="trooper">Black & Grey</button>
+<button id="vader">You did it</button>
+
 
 <script>
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
+        function jsIsCool() {
+            // TODO: Uncomment next line and get the main header element by id
 
-        var mainHeader = document.getElementById("main-header");
+            var mainHeader = document.getElementById("main-header");
 
-        // console.log(mainHeader);
+            // console.log(mainHeader);
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+            // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        mainHeader.innerHTML = "<em>JavaScript is Cool</em>";
+            mainHeader.innerHTML = "JavaScript is Cool";
 
-        // TODO: Uncomment the next line and get the sub header element by id
+        }
+        document.querySelector("#xwing").addEventListener("click" , jsIsCool);
 
-        var subHeader = document.getElementById("sub-header");
 
-        // TODO: Set the text color of subHeader to blue
+        var blueSubHeader = function () {
+            // TODO: Uncomment the next line and get the sub header element by id
+            var subHeader = document.getElementById("sub-header");
 
-        subHeader.style.color = "blue";
+            // TODO: Set the text color of subHeader to blue
 
-        // TODO: Uncomment the next line and get all list items
+            subHeader.style.color = "blue";
+        };
+        document.getElementById("ywing").addEventListener("click",blueSubHeader);
 
-        var listItems = document.querySelectorAll("li");
+        document.getElementById("trooper").addEventListener("click",function () {
 
-        // console.log(listItems)
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
+            // TODO: Uncomment the next line and get all list items
 
-        for(var i = 0; i < listItems.length; i++){
-            if (i % 2 === 0){
-                listItems[i].style.color = "grey";
+            var listItems = document.querySelectorAll("li");
+
+            // console.log(listItems)
+
+            // TODO: Set text color on every other list item to grey
+            // TODO: Set text color of li with dbid = 1 to blue
+
+            for (var i = 0; i < listItems.length; i++) {
+                if (i % 2 === 0) {
+                    listItems[i].style.color = "grey";
+                }
+                if (listItems[i].getAttribute("data-dbid") === "1") {
+                    listItems[i].style.color = "blue";
+                }
             }
-            if (listItems[i].getAttribute("data-dbid") === "1"){
-                listItems[i].style.color = "blue";
-            }
+        });
+
+        function paragraphMissionAccomplished() {
+            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+
+            var subParagraphs = document.getElementsByClassName("sub-paragraph");
+
+            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
+            subParagraphs[0].innerHTML = "<em> Mission Accomplished!</em>"
         }
 
-
-
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-
-        subParagraphs[0].innerHTML = "<em> Mission Accomplished!</em>"
-
+        document.getElementById("vader").addEventListener("click",paragraphMissionAccomplished)
     })();
 </script>
 </body>
