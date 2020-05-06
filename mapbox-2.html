@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox 2</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div id='map' style='width: 100vw; height: 500px;'></div>
+<script src="js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = mapKey;
+    var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v9",
+        zoom: 10,
+        center: [-77.0502 , 38.8893]
+    });
+
+    var marker = new mapboxgl.Marker()
+            .setPopup(new mapboxgl.Popup().setHTML("<P>For score and seven years ago</P>"))
+            .setLngLat([- 77.0502, 38.8893])
+            .addTo(map);
+
+    // var marker =  new mapboxgl.Marker()
+    // .setLngLat([-77.0502 , 38.8893])
+    // .addTo(map);
+    // var popup = new mapboxgl.Popup()
+    // .setLngLat([-77.0502 , 38.8893])
+    // .setPopupL(new mapboxgl.Popup().setHTML("<p> Lincoln Memorial</p>"))
+    // .addTo(map);
+</script>
+</body>
+</html>
