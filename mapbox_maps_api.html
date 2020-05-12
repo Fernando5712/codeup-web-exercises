@@ -2,10 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mapbox API</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
-
+<div id='map' style='width: 100vw; height: 500px;'></div>
+<script src="js/keys.js"></script>
 <script src="js/mapbox-geocoder.js"></script>
+<script>
+    mapboxgl.accessToken = mapKey;
+    var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v9",
+    });
+    geocode("15500 SW 29th St, Miramar, FL 33027" , mapKey).then(function (result) {
+        setTimeout(function() {
+            map.setCenter(result);
+        }, 500);
+        console.log(result);
+        map.setZoom(17);
+    });
+    var marker = new mapboxgl.Marker()
+        .setPopup(new mapboxgl.Popup().setHTML("<P>BoKampers Bar & Grill on the water</P>"))
+        .setLngLat([- 80.353209, 25.982786])
+        .addTo(map);
+
+
+
+
+
+</script>
 </body>
 </html>
