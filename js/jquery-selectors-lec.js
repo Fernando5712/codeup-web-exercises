@@ -1,6 +1,6 @@
 "use strict";
 
-$(document).ready(function() {
+// $(document).ready(function() {
 	//jQuery Docs ==> https://api.jquery.com/
 
 	/**********************************************
@@ -25,16 +25,16 @@ $(document).ready(function() {
 	// $('#some-id');
 
 	// TODO TOGETHER: Select the contents/html of the id 'book-welcome' and set equal to the variable 'contents'. Console.log the contents
-		$("#book-welcome");
+	// 	$("#book-welcome");
 
 	// TODO TOGETHER: Change the background color of the id 'book-welcome'
-		$("#book-welcome").css("background-color" , "grey");
+	// 	$("#book-welcome").css("background-color" , "grey");
 
 	// TODO: Select the contents/html of the id 'book-bundle-one' and set equal to the variable 'bookBundle'. Console.log the contents
-		var bookBundle = $("#book-bundle-one").html();
+	// 	var bookBundle = $("#book-bundle-one").html();
 
 	// TODO: Change one css property of the id 'container'
-		$("#container").css("background-color" , "lightblue");
+	// 	$("#container").css("background-color" , "lightblue");
 
 
 	/**********************************************
@@ -43,9 +43,9 @@ $(document).ready(function() {
 	// $('.some-class');
 
 	// TODO TOGETHER: Change the font size of all the .main-headings
-		$(".main-headings").css("font-size" , "xx-large");
-		$("p").css("font-size","large");
-		// $("li").css("font-size","large");
+	// 	$(".main-headings").css("font-size" , "xx-large");
+	// 	$("p").css("font-size","large");
+	// 	// $("li").css("font-size","large");
 
 	// TODO: Explore the following JS Bin example:
 	//  https://jsbin.com/topupe/1/edit?js,output
@@ -101,20 +101,37 @@ $(document).ready(function() {
 	//  https://jsbin.com/fivucu/1/edit?js,output
 
 
-});
+// });
 
 //EXERCISE
 
-var content = $("#Practice-heading").html();
-alert(content);
+// var content = $("#Practice-heading").html();
+// alert(content);
+//
+// $(".codeup").css("border" , "solid 1px red");
+//
+// $("li").css("font-size" , "20px");
+//
+// $("h1,p,li").css("background-color" , "yellow");
+//
+// var h1alert = $("h1").html();
+// alert(h1alert);
 
-$(".codeup").css("border" , "solid 1px red");
 
-$("li").css("font-size" , "20px");
+$("h1").click(function () {
+	$(this).css("background", "yellow")
+});
 
-$("h1,p,li").css("background-color" , "yellow");
+$("p").dblclick(function () {
+	$(this).css("font-size","18px")
+});
 
-var h1alert = $("h1").html();
-alert(h1alert);
+$("li").hover(function () {
+	$(this).css("color","red")
+}, function () {
+	$(this).css("color","black");
+
+});
+
 
 
