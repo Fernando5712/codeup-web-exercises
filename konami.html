@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami.css">
+</head>
+<body>
+<h1>Konami Code</h1>
+<p>
+    Enter the Old Konami Code from contra to get 30 extra lives. Free shipping is included.
+</p>
+<a class="mylink" href="https://oldgameshelf.com/contra-208.html"></a>
+<!--<audio id="contrasound" preload="auto">-->
+<!--    <source src="https://www.101soundboards.com/sounds/39565-pause">-->
+<!--</audio>-->
+<!--<button type="button">Play</button>-->
+<p class="code">
+    <span>&uarr;</span>
+    <span>&uarr;</span>
+    <span>&darr;</span>
+    <span>&darr;</span>
+    <span>&larr;</span>
+    <span>&rarr;</span>
+    <span>&larr;</span>
+    <span>&rarr;</span>
+    <span>B</span>
+    <span>A</span>
+</p>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+    var contra = {
+
+        konami: function() {
+            var konamikeys = [38,38,40,40,37,39,37,39,66,65,13],
+                started = false,
+                count = 0;
+
+            $(document).keydown(function(e){
+                var reset = function() {
+                    started = false;
+                    count = 0;
+                };
+                var key = e.keyCode;
+                if(!started){
+                    if(key === 38){
+                        started = true;
+                    }
+                }
+                if (started){
+                    if (konamikeys[count] === key){
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count === 11){
+                        alert("let's take a trip down memory lane ");
+                        // var audio = $("#contrasound")[0];
+                        // $("button").click(function () {
+                        //     audio.play();
+                        // });
+                        window.location.href = "https://oldgameshelf.com/contra-208.html";
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        }
+    };
+
+    contra.konami();
+</script>
+</body>
+</html>
