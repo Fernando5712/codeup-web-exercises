@@ -1,1 +1,4 @@
-var mapKey = 'pk.eyJ1IjoiZmVybmFuZG8xNyIsImEiOiJjazl1ZWI1NmQwMHFrM2pyNWo3ZGs4dnQ2In0.4Cq68Is3Yk8WmXQeD8R0zA';
+const MAPKEY = 'pk.eyJ1IjoiZmVybmFuZG8xNyIsImEiOiJjazl1ZWI1NmQwMHFrM2pyNWo3ZGs4dnQ2In0.4Cq68Is3Yk8WmXQeD8R0zA';
+const OPEN_WEATHER_APID = "990976cf179d69b584d8a14ef0b12e2b";
+
+

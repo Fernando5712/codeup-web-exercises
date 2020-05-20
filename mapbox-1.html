@@ -10,7 +10,7 @@
 <div id='map' style='width: 100vw; height: 500px;'></div>
 <script src="js/keys.js"></script>
 <script>
-    mapboxgl.accessToken = mapKey;
+    mapboxgl.accessToken = MAPKEY;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
@@ -20,7 +20,7 @@
     });
     var delay = 5000;
     var timeoutID = setTimeout(function () {
-        mapboxgl.accessToken = mapKey;
+        mapboxgl.accessToken = MAPKEY;
         var map1 = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/satellite-streets-v9',
