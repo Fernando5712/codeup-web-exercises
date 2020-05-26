@@ -9,3 +9,23 @@ $(document).ready(function () {
     userHistory('FernandoHernandez')
 });
 
+function timeOut(millsecond) {
+    let secs = millsecond / 1000;
+    return new Promise((resolve, reject) => {
+        if (typeof millsecond === "number") {
+            setTimeout(() => {
+                if (millsecond <= 1000) {
+                    resolve (" You'll see this after ${secs} seconds")
+                } else {
+                    resolve ( " You'll see this after ${secs} seconds")
+                }
+            }, millsecond)
+        } else {
+            reject ("${millsecond.toUpperCase()} IDK WHAT HAPPENED")
+        }
+    })
+}
+
+console.log(timeOut(1000));
+timeOut(2000).then(message => console.log("Promise Resolved", message));
+timeOut("random").catch(message => console.log("Promise Rejected"));
